@@ -26,4 +26,9 @@ final class CacheService
     {
         return now()->addHours($cacheHours);
     }
+
+    public function delete(string $cacheKey): bool
+    {
+        return Cache::delete($cacheKey);
+    }
 }

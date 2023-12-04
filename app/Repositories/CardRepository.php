@@ -25,6 +25,11 @@ final class CardRepository
             });
     }
 
+    public function getRandom(): Builder
+    {
+        return $this->query()->inRandomOrder();
+    }
+
     private function query(): Builder
     {
         return Card::query();
